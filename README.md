@@ -1,2 +1,2 @@
 # SO
-Repositório da matéia de Sistemas Operacionais
+Repositório da matéria de Sistemas Operacionais
