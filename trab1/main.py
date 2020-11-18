@@ -10,7 +10,7 @@ from classes.cpu_estado import CPU_Estado
 
 # Retorna uma lista de strings em que cada elemento é uma linha do arquivo
 def extraiArquivo():
-    arquivo = open('./programa.txt', 'r')
+    arquivo = open('programa.txt', 'r')
     programa = arquivo.read().splitlines()
     arquivo.close()
     return programa
@@ -48,7 +48,7 @@ def main():
     while c.interrupcao() == "normal":
         c.executa()
 
-    # Print info
+    # Print informação
     print("A CPU PAROU NA INSTRUÇÃO: " + str(c.instrucao()))
     print("MEMORIA DE DADOS: " + str(c.salva_dados()))
 
