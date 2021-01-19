@@ -1,0 +1,4 @@
+LE 0
+NEG
+GRAVA 1
+PARA

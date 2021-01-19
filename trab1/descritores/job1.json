@@ -1,0 +1,12 @@
+{
+    "programa": "programa.txt",
+    "memoria": "20",
+    "entrada": {
+                    "local": "./trab1/e_s/0.txt",
+                    "tempo": "3"
+                },
+    "saida": {
+        "local": "./trab1/e_s/1.txt",
+        "tempo": "4"
+    }
+}
