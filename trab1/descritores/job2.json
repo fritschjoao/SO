@@ -8,5 +8,6 @@
     "saida": {
         "local": "./trab1/e_s/1.txt",
         "tempo": "7"
-    }
+    },
+    "prioridade": "0.4"
 }

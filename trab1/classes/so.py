@@ -3,6 +3,7 @@ from classes.cpu_estado import CPU_Estado
 from classes.controlador import Controlador
 from classes.job import Job
 from classes.timer import Timer
+from classes.escalonador import Escalonador
 
 # Classe So
 class So:
@@ -26,6 +27,9 @@ class So:
 
         # Objeto Timer
         self.timer = Timer()
+
+        # Objeto Escalonador
+        self.escalonador = Escalonador()
     
     # Inicializa SO
     def inicializa(self):
@@ -52,15 +56,14 @@ class So:
         # Inicializa o Timer
         self.timer.inicializa()
 
+        # Inicializa o escalonador
+        self.escalonador.inicializa(self.jobs)
+
         # Inicia execução do progama
         self.controlador.executa(self)
 
     # Avança a lista job e atualiza a cpu
     def avanca_job(self):
-        # if(self.pos_job-1 == len(self.jobs)):
-        #     # Print informação
-        #     print("A CPU PAROU NA INSTRUÇÃO: " + str(self.c.instrucao()))
-        #     print("MEMORIA DE DADOS: " + str(self.c.salva_dados()))
 
         if (self.pos_job < len(self.jobs)):
             self.job_atual = self.jobs[self.pos_job]

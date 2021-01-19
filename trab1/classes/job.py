@@ -10,8 +10,11 @@ class Job:
         self.__memoria = int(data["memoria"])
         self.__entrada = data["entrada"]
         self.__saida = data["saida"]
+        self.__prioridade = float(data["prioridade"])
 
         self.__estado = False
+
+        self.__condicao = 'Pronto'
 
     def extrai_json(self, arquivo):
         with open("./trab1/descritores/" + arquivo, 'r', encoding='utf-8') as file:
@@ -47,3 +50,9 @@ class Job:
 
     def estado(self):
         return self.__estado
+
+    def condicao(self):
+        return self.__condicao
+
+    def muda_condicao(self, cond):
+        self.__condicao = cond
